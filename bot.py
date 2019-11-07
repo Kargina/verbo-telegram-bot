@@ -54,7 +54,7 @@ def main():
         with open(path, "w") as f:
             data = ""
             for line in user_dict:
-                data = f"{data}\n{line[1]}:{line[2]}"
+                data = f"{line[1]}:{line[2]}\n{data}"
             f.write(data)
         with open(path, "r") as f:
             bot.send_document(message.chat.id, f, caption="dict.txt")
